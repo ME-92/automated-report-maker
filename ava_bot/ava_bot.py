@@ -233,4 +233,4 @@ class AVABot:
         except(NoSuchWindowException, WebDriverException):
             return
 
-Instance=AVABot()
+#Instance=AVABot()
