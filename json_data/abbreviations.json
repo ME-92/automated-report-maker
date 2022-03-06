@@ -1,0 +1,32 @@
+{
+	"abbreviations": {
+		"[ ]?N ": " North ",
+		"[ ]?S ": " South ",
+		"[ ]?E ": " East ",
+		"[ ]?W ": " West ",
+		"[ ]?NE ": " Northeast ",
+		"[ ]?NW ": " Northwest ",
+		"[ ]?SE ": "Southeast",
+		"[ ]?SW ": " Southwest ",
+		"St\\s": "Street ",
+		"St\\.": "Street ",
+		"St$": "Street ",
+		"Ave\\s": "Avenue ",
+		"Ave\\.": "Avenue ",
+		"Ave$": "Avenue",
+		"Dr$": "Drive",
+		"Dr\\s": "Drive",
+		"Ct": "Court",
+		"Ln": "Lane",
+		"Hwy": "Highway",
+		"Fwy": "Freeway",
+		"Pl": "Place",
+		"Rd": "Road",
+		"&": " and ",
+		"\\+": " and ",
+		"/": " and ",
+		"Blvd": "Boulevard",
+		"Pkwy": "Parkway",
+		"Tpke": "Turnpike"
+	}
+}

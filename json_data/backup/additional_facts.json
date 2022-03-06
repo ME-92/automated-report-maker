@@ -1,0 +1,7 @@
+{
+	"additional_facts": {
+		"injured": "([2-9]|(two|three|four|five|six|seven|eight|nine|ten))[ ]?(people|ppl|men|males|females)?[\\s|,](shot|stabbed|injured)",
+		"dead": "([1-9]|(one|two|three|four|five|six|seven|eight|nine|ten))?[ ]?(suspects|persons)?[ ]?fatally(stabbed|shot)?", 
+		"both": "(shot|stabbed),[ ]?([1-9]|(one|two|three|four|five|six|seven|eight|nine|ten)) fatally"
+	}
+}

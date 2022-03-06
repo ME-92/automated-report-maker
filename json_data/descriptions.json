@@ -1,0 +1,10 @@
+{
+    "descriptions": {
+        "Shots fired": "Shots fired have been reported ",
+        "Sound of gunshots": "Sound of gunshots has been reported ",
+        "Stabbed person (dead)": "One person was fatally stabbed ",
+        "Stabbed person (injured)": "One person was stabbed ",
+        "Shot person (dead)": "One person was fatally shot ",
+        "Shot person (injured)": "One person was shot "
+    }
+}

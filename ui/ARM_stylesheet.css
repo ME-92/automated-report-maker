@@ -1,0 +1,16 @@
+
+QMainWindow,QListWidget#indications_list,QTreeView,QMessageBox,QDialog {background-color: rgb(40, 112, 120)}
+QPushButton,QTabBar::tab,QSpinBox,QPlainTextEdit,QLineEdit,QListWidget,QTableWidget,QListView,QTimeEdit,QDateEdit{background-color: rgb(213, 220, 197)}
+QTabBar::tab:selected {background:rgb(40, 112, 120);background-color:qlineargradient(spread:pad, x1:1, y1:1, x2:0.182, y2:0.221591, stop:0.502825 rgba(40, 112, 120,255), stop:1 rgba(48,135, 145, 255));}
+QPushButton::checked{background-color: #487828}
+QProgressBar::chunk{background-color: #487828}
+
+QTabWidget::pane { border: 0; }
+QPushButton{icon-size: 28px;}
+
+QPlainTextEdit#duration,QPlainTextEdit#time_accuracy,QTimeEdit,QDateEdit,QSpinBox,QLabel{font-size:12pt;}
+QPushButton,QPlainTextEdit,QTableWidget,QHeaderView,QComboBox,QSpinBox#trust_score,QSpinBox#location_accuracy,QLabel#label_trust_score,QLabel#label_location_accuracy,QLabel#label_address_type,QLabel#injured_label,QLabel#dead_label{font-size:10pt;}
+QListWidget,QPlainTextEdit#console{font-size:9pt;}
+QPushButton#paste_link,QPushButton#paste_tweet_text,QPushButton#paste_description{font-size:8pt;};
+
+

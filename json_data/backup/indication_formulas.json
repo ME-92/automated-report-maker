@@ -1,0 +1,21 @@
+{
+	"indication_formulas": {
+		"(rounds|gunshots) (heard)?": "Sound of gunshots",
+		"\\d+ heard": "Sound of gunshots",
+		"heard \\d{1,2} shots?": "Sound of gunshots",
+		"heard 1 shot": "Sound of gunshots",
+		"Shots? fired": "Shots fired",
+		"Shot (and|&) killed": "Shot person (dead)",
+		"(\\d)? fatally(shot|shoots)?": "Shot person (dead)",
+		"person shot": "Shot person (injured)",
+		"ale \\([0-8][0-9]\\)? shot": "Shot person (injured)",
+		"ale[s]? shot": "Shot person (injured)",
+		"\\d (ppl|people|persons?)?[ ]?shot( |,|\\.)": "Shot person (injured)",
+		"Stabbed(and|&)killed": "Stabbed person (dead)",
+		"(\\d)? fatally stabbed": "Stabbed person (dead)",
+		"(\\d)?stabbed to death": "Stabbed person (dead)",
+		"(persons?)? stabbed": "Stabbed person (injured)",
+		"ale \\([0-8][0-9]\\)? stabbed": "Stabbed person (injured)",
+		"custody|arrest": "Arrest"
+	}
+}

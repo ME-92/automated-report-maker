@@ -1,0 +1,30 @@
+{
+    "reports": [
+        {
+            "coordinates": "",
+            "all_indications": [
+                "Shots fired"
+            ],
+            "starting_time": [
+                "01",
+                "45"
+            ],
+            "date": "13 February 2022",
+            "injured": "",
+            "dead": "",
+            "source": "Twitter @ScannerDSM",
+            "link": "https://twitter.com/ScannerDSM/status/1492661219085455360",
+            "address_type": "block",
+            "address": "Wade Street  Caller",
+            "house_nr": "1300",
+            "location_accuracy": "",
+            "tweet_text": "Shots fired: 1300 Wade St. Caller heard 5-6 shots.",
+            "city_state": "Des Moines",
+            "description": "Shots fired have been reported in the 1300 block of Wade Street Caller.",
+            "source_type": "",
+            "relevancy": 1,
+            "duration": "",
+            "time_accuracy": ""
+        }
+    ]
+}

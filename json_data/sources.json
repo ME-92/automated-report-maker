@@ -1,0 +1,60 @@
+{
+ "sources": {
+  "SPOTNEWSonIG": [
+   "Chicago,Il",
+   1
+  ],
+  "Chicago_Scanner": [
+   "Chicago,Il",
+   1
+  ],
+  "WindyCityWxMan": [
+   "Chicago,Il",
+   1
+  ],
+  "ChiLivePD": [
+   "Chicago,Il",
+   1
+  ],
+  "BreakingNowCT": [
+   "Connecticut",
+   1
+  ],
+  "DCPoliceDept": [
+   "Washington, D.C.",
+   3
+  ],
+  "ScannerDSM": [
+   "Des Moines",
+   1
+  ],
+  "PDRScanner": [
+   "Los Angeles",
+   1
+  ],
+  "NEO_Scan": [
+   "Cleveland, Ohio",
+   1
+  ],
+  "NYC_Alerts911": [
+   "New York",
+   1
+  ],
+  "houstonpolice": [
+   "Houston, Texas",
+   3
+  ],
+  "911_calls": [
+   "Missouri, USA",
+   1
+  ],
+  "MEM_PoliceDept": [
+   "Memphis, Tn",
+   "3"
+  ],
+  "TPSOperations": [
+   "Toronto, Ca",
+   "3"
+  ]
+ }
+}

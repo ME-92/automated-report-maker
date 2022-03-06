@@ -1,0 +1,8 @@
+{
+	"address_formulas": {
+		"\\d{1,4}00\\s\\w+\\s[a-zA-Z0-9.]+\\s?[a-zA-z0-9.]+": "block",
+		"\\d{2,6}\\s[a-zA-Z0-9.]\\s[a-zA-Z0-9]+\\s?(Ave|St(.)?)?": "address",
+		"\\d{2,6}\\s[a-zA-Z0-9.]*\\s?(Ave|St(.)?)": "address",
+		"[a-zA-Z0-9.\\s]{2,}((\\/)|( and ))[a-zA-Z0-9\\s]+": "lat/long"
+	}
+}

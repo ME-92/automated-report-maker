@@ -1,0 +1,453 @@
+[
+    {
+        "Incident of physical harm": [
+            {
+                "Injured person": [
+                    "Shot person (injured)",
+                    "Stabbed person (injured)",
+                    "Beaten person (injured)",
+                    "Wounded person",
+                    "Electrocuted person (injured)"
+                ]
+            },
+            {
+                "Dead person": [
+                    "Drowned person",
+                    "Stabbed person (dead)",
+                    "Shot person (dead)",
+                    "Beaten person (dead)",
+                    "Electrocuted person (dead)"
+                ]
+            },
+            {
+                "Person in need for help": [
+                    "Unresponsive / unconscious person",
+                    "Person with breathing problems",
+                    "Person having seizures"
+                ]
+            },
+            "Injured animal",
+            "Dead animal"
+        ]
+    },
+    {
+        "Incident of irregular behaviour": [
+            "Intoxicated person",
+            {
+                "Irregular behaviour of an animal": [
+                    "Animal on road - alive",
+                    "Animal on road - dead",
+                    "Animal on train tracks",
+                    "Animal attack"
+                ]
+            },
+            {
+                "Irregular behaviour of a person": [
+                    "Suspicious person",
+                    "Exhibitionism",
+                    "Person on road",
+                    "Person on train tracks",
+                    "People running / fleeing",
+                    "Public drug use",
+                    "Weapons found",
+                    "Assembly",
+                    "Suspect on the run",
+                    "Barricaded person"
+                ]
+            },
+            {
+                "Irregular driving behaviour": [
+                    "Road rage",
+                    "Driving under influence"
+                ]
+            },
+            "Screaming",
+            {
+                "Suspicious object": [
+                    "Suspicious vehicle",
+                    "Suspicious luggage",
+                    "Suspicious package",
+                    "Suspicious device"
+                ]
+            },
+            "Low altitude flight",
+            "Power outage",
+            "Airplane engine malfunction",
+            "Narcotics / drugs found",
+            "Building collapsed",
+            "Road collapsed",
+            "Bridge collapsed",
+            "Airplane problems",
+            "Resisting arrest",
+            "Suspicious activity",
+            "Debit / credit card fraud",
+            "Object on tracks",
+            "Lockdown",
+            "Irregular activity",
+            "Suspicious substance found",
+            "Shelter in place"
+        ]
+    },
+    {
+        "Weapon / aggression incident": [
+            {
+                "Explosion": [
+                    "Bomb explosion",
+                    "Vehicle bomb explosion",
+                    "Gas explosion",
+                    "Chemical explosion"
+                ]
+            },
+            "Sound of explosion",
+            {
+                "Shots fired": [
+                    "Mass shooting",
+                    "Active shooter",
+                    "Shooting between groups (Shootout)",
+                    "Drive-by shooting"
+                ]
+            },
+            {
+                "Assault": [
+                    "Verbal assault",
+                    "Verbal sexual assault",
+                    "Stabbing",
+                    "Mass stabbing",
+                    "Acid attack",
+                    "Brawl",
+                    "Physical attack",
+                    "Sexual assault"
+                ]
+            },
+            {
+                "Finding of explosives": [
+                    "Finding explosives in a vehicle",
+                    "Finding explosives in a building",
+                    "Finding a war bomb"
+                ]
+            },
+            "Air strike",
+            {
+                "Person carrying a weapon": [
+                    "Person carrying a knife",
+                    "Person carrying a gun",
+                    "Person carrying a riffle",
+                    "Person carrying a grenade"
+                ]
+            },
+            "Hostage situation",
+            "Standoff",
+            "Tear gas / pepper spray (deployed by a civilian)",
+            "Sound of gunshots"
+        ]
+    },
+    {
+        "Incident of missing person / object": [
+            "Missing person / people",
+            {
+                "Missing goods": [
+                    "Purse snatching",
+                    "Phone snatching",
+                    "Robbery",
+                    "Carjacking",
+                    "Burglary",
+                    "Pickpocketing",
+                    "Missing goods from a store",
+                    "Missing goods from a truck",
+                    "Missing goods from a van",
+                    "Missing goods from a train",
+                    "Missing goods from a car",
+                    "Missing goods from a motorcycle",
+                    "Missing goods from a bus",
+                    "Missing goods from a tram",
+                    "Missing goods from a plane",
+                    "Missing goods from a boat",
+                    "Missing goods from a house",
+                    "Missing goods from a building",
+                    "Missing vehicle",
+                    "Missing bicycle"
+                ]
+            }
+        ]
+    },
+    {
+        "Incidents of property damage / tampering with property": [
+            "Graffitti",
+            "Property damage",
+            "Breaking in",
+            "Trespassing",
+            "Power lines down"
+        ]
+    },
+    {
+        "Peace disturbance incident": [
+            "Hooligan gathering / march",
+            "Protest",
+            "Civil unrest",
+            "Riot",
+            "Crowd of people",
+            "Politically motivated gathering",
+            "Bomb threat",
+            "Prison escape",
+            "Mass escape",
+            "Noise disturbance",
+            "Pyrotechnic incident"
+        ]
+    },
+    {
+        "Traffic incident": [
+            {
+                "Collision": [
+                    "Car vs. car collision",
+                    "Car vs. bus collision",
+                    "Car vs. train collision",
+                    "Car vs. pedestrian collision",
+                    "Car vs. motorcycle collision",
+                    "Car vs. bicycle collision",
+                    "Car vs. truck collision",
+                    "Bus vs. bus collision",
+                    "Bus vs. train collision",
+                    "Bus vs. pedestrian collision",
+                    "Bus vs. motorcycle collision",
+                    "Bus vs. bicycle collision",
+                    "Bus vs. truck collision",
+                    "Train vs. train collision",
+                    "Train vs.pedestrian collision",
+                    "Train vs. motorcycle collision",
+                    "Train vs. bicycle collision",
+                    "Train vs. truck collision",
+                    "Motorcycle vs. pedestrian collision",
+                    "Motorcycle vs. truck collision",
+                    "Motorcycle vs. bicycle collision",
+                    "Bicycle vs. pedestrian collision",
+                    "Bicycle vs. bicycle collision",
+                    "Truck vs. truck collision",
+                    "Truck vs. pedestrian collision",
+                    "Car vs. animal collision",
+                    "Bus vs. animal collision",
+                    "Train vs. animal collision",
+                    "Motorcycle vs. animal collision",
+                    "Truck vs. animal collision",
+                    "Car vs. tram collision",
+                    "Bus vs. tram collision",
+                    "Tram vs. pedestrian collision",
+                    "Tram vs. bicycle collision",
+                    "Tram vs. animal collision",
+                    "Tram vs. motorcycle collision",
+                    "Plane vs. plane collision",
+                    "Van vs. car collision",
+                    "Van vs. bus collision",
+                    "Van vs. tram collision",
+                    "Van vs. train collision",
+                    "Van vs. motorcycle collision",
+                    "Van vs. animal collision",
+                    "Van vs. pedestrian collision",
+                    "Van vs. bicycle collision",
+                    "Van vs. truck collision",
+                    "Car hits an immobile object",
+                    "Truck hits an immobile object",
+                    "Bus hits an immobile object",
+                    "Motorcycle hits an immobile object",
+                    "Van hits an immobile object",
+                    "Tractor hits an immobile object",
+                    "Car vs. tractor collision",
+                    "Bus vs. tractor collision",
+                    "Van vs. tractor collision",
+                    "Train vs. tractor collision",
+                    "Motorcycle vs. tractor collision",
+                    "Tractor vs. bicycle collision",
+                    "Truck vs. tram collision",
+                    "Motorcycle vs. motorcycle collision",
+                    "Truck vs. bicycle collision",
+                    "Van vs. van collision",
+                    "Tram vs. tram collision",
+                    "Tractor vs. tram collision",
+                    "Train hits an imobile object",
+                    "Airplane vs. helicopter collision",
+                    "Truck vs. tractor collision",
+                    "Multi vehicle collision",
+                    "Car vs. electric scooter collision",
+                    "Bus vs. electric scooter collision",
+                    "Train vs. electric scooter collision",
+                    "Electric scooter vs. pedestrian collision",
+                    "Motorcycle vs. electric scooter collision",
+                    "Bicycle vs. electric scooter collision",
+                    "Truck vs. electric scooter collision",
+                    "Van vs. electric scooter collision",
+                    "Tram vs. electric scooter collision"
+                ]
+            },
+            {
+                "Helicopter crashes / falls": "Helicopter crashes into building"
+            },
+            {
+                "Airplane crashes / falls": "Airplane crashes into building"
+            },
+            {
+                "Traffic incident - single vehicle involved": [
+                    "Traffic incident - Car (no other objects or subjects involved)",
+                    "Traffic incident - Bus (no other objects or subjects involved)",
+                    "Traffic incident - Truck (no other objects or subjects involved)",
+                    "Traffic incident - Van (no other objects or subjects involved)",
+                    "Traffic incident - Train (no other objects or subjects involved)",
+                    "Emergency stop of a train",
+                    "Train derailment",
+                    "Traffic incident - Tram (no other objects or subjects involved)",
+                    "Traffic incident - Motorcycle (no other objects or subjects involved)",
+                    "Traffic incident - Tractor (no other objects or subjects involved)",
+                    "Derailment",
+                    "Emergency landing",
+                    "Driver fled"
+                ]
+            },
+            {
+                "Traffic disturbance": [
+                    "Train tracks blocked",
+                    "Vehicle on train tracks",
+                    "Street blocked",
+                    "Lane(s) blocked",
+                    "River blocked",
+                    "Airport blocked",
+                    {
+                        "Traffic delays": [
+                            "Minor traffic delay (up to 30 minutes)",
+                            "Traffic delay (up to 60 minutes)",
+                            "Significant traffic delay (longer than 60 minutes)"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Fire incident": [
+            {
+                "Building on fire": [
+                    "Apartment on fire",
+                    "House on fire",
+                    "Industrial plant on fire",
+                    "Garage on fire",
+                    "Shed on fire",
+                    "Farm on fire",
+                    "Warehouse on fire"
+                ]
+            },
+            {
+                "Vehicle on fire": [
+                    "Car on fire",
+                    "Bus on fire",
+                    "Truck on fire",
+                    "Boat on fire",
+                    "Motorcycle on fire",
+                    "Train on fire",
+                    "Airplane on fire",
+                    "Van on fire",
+                    "Submarine on fire",
+                    "Tram on fire"
+                ]
+            },
+            {
+                "Other objects on fire": [
+                    "Person on fire",
+                    "Animal on fire",
+                    "Trees on fire",
+                    "Brush on fire",
+                    "Trash can on fire",
+                    "Plantation on fire"
+                ]
+            }
+        ]
+    },
+    {
+        "Natural incident": [
+            "Shaking ground",
+            "Earthquake",
+            "Flood",
+            "Drought",
+            "Avalanche",
+            "Rockslide",
+            "Volcanic eruption",
+            "Mudslide",
+            "Landslide",
+            "Severe fog",
+            "Heat wave",
+            "Sinkhole",
+            "Land crack",
+            "Storm",
+            "Hail storm",
+            "Blizzard",
+            "Severe winds",
+            "Tornado",
+            "Hurricane",
+            "Tsunami",
+            "Cyclone",
+            "Typhoon",
+            "Person struck by lightning",
+            "Object struck by lightning",
+            "Wildfire",
+            "Forest fire",
+            "Fallen tree",
+            "Falling rocks"
+        ]
+    },
+    {
+        "Air impurity incident": [
+            "Smoke",
+            "Allergens",
+            "Smog",
+            "Volcanic ash",
+            "Toxic fumes"
+        ]
+    },
+    {
+        "Food related incident": [
+            "Food poisoning",
+            "Food recall"
+        ]
+    },
+    {
+        "Emergency responders at the scene": [
+            "Police at the scene",
+            "Firefighters at the scene",
+            "Evacuation",
+            "Ambulance at the scene",
+            "SWAT at the scene",
+            "Bomb squad at the scene"
+        ]
+    },
+    {
+        "Police operation": [
+            "Police investigation",
+            {
+                "Police chase / pursuit": "Police car chase"
+            },
+            "Removal of explosives",
+            "Arrest",
+            "Drug raid",
+            "Area cordoned off",
+            {
+                "Crowd control": [
+                    "Tear gas / pepper spray (deployed by official forces)",
+                    "Water cannon (used by police)"
+                ]
+            }
+        ]
+    },
+    {
+        "Hazardous substance incident": [
+            "Gas leak",
+            "Nuclear related incident",
+            "Biological substance release",
+            "Chemical substance release",
+            {
+                "Radioactive substance release": [
+                    "Radioactive waste leak",
+                    "Nuclear radiation"
+                ]
+            },
+            "Flammable liquid leak"
+        ]
+    },
+    "Attempt",
+    "Threat"
+]
