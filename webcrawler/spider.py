@@ -8,10 +8,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, InvalidSessionIdException, \
     SessionNotCreatedException, InvalidArgumentException
 
-import load_json_files
-from text_reader import Reader
-from logger import log
-
+from json_data import load_json_files
+from text_processing.text_reader import Reader
+from logger.logger import log
+ 
+import time
 
 
 class Spider():
@@ -83,7 +84,7 @@ class Spider():
         enter_address.send_keys(f"{address}, {city}")
         self.driver.find_element('css selector', 'button[id="searchbox-searchbutton"]').click()
         try:
-            WebDriverWait(self.driver, 5).until(EC.url_contains("maps/place/"))
+            WebDriverWait(self.driver, 8).until(EC.url_contains("maps/place/"))
         except TimeoutException:
             log.error("No valid address could be found on GMaps.")
             return ''
@@ -100,22 +101,7 @@ class Spider():
                 return new_address, coordinates
             except:
                 return "",""
-    # def scrape_gmaps_for_address(self, address, city):
-    #     self.driver.get("https://www.google.com/maps/")
-    #     self.waiting_function('css selector', 'input[id="searchboxinput"]')
-    #     enter_address = self.driver.find_element_by_css_selector('input[id="searchboxinput"]')
-    #     enter_address.send_keys(f"{address}, {city}")
-    #     self.driver.find_element('css selector', 'button[id="searchbox-searchbutton"]').click()
-    #     try:
-    #         WebDriverWait(self.driver, 5).until(EC.url_contains("maps/place/"))
-    #     except TimeoutException:
-    #         log.info("No valid address could be found on GMaps.")
-    #         return ''
-    #     gmaps_url = self.driver.current_url
-    #     coordinates = self._extract_coord_from_gmaps_link(gmaps_url)
-    #     address = self._extract_address_from_gmaps_link(gmaps_url)
-    #     return address, coordinates
-    #
+
     def _extract_address_from_gmaps_link(self, gmaps_url):
         address = re.search('(?<=place\/)(.*?)(?=,)', gmaps_url).group()
         address = address.replace('+%26+', ' & ')
@@ -144,10 +130,10 @@ class Spider():
             prefs = {"profile.managed_default_content_settings.images": 2}
         if self.run_headless:
             self.options.add_argument('headless')
-        self.options.add_experimental_option("prefs", prefs)
         self.options.add_argument("--lang=en-EN")
         self.options.add_experimental_option('excludeSwitches', ['enable-logging'])
-        self.chrome_path = os.path.abspath('chromedriver.exe')
+        self.options.add_experimental_option("prefs", prefs)
+        self.chrome_path = os.path.abspath('arm/webcrawler/chromedriver.exe')
 
     def waiting_function(self, by_variable, attribute):
         try:

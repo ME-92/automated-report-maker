@@ -8,11 +8,10 @@ from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from PyQt5.QtWidgets import QTableWidgetItem, QInputDialog, QMessageBox, QFileDialog, QDialog, QDialogButtonBox, \
     QLineEdit, QFormLayout, QHeaderView
 
-from ARM import ARM_resource_rc, listener
-
+from ui import ARM_resource_rc, listener
+from ui.tree_proxy_model import LeafFilterProxyModel
 from json_data import load_json_files
-from tree_proxy_model import LeafFilterProxyModel
-from logger import UiHandler,log
+from logger.logger import UiHandler,log
 
 
 class ARM_Main(QtWidgets.QMainWindow):
@@ -190,7 +189,7 @@ class ARM_Main(QtWidgets.QMainWindow):
                 error.exec_()
 
     def _add_item_to_table(self,dict_name,item):
-        old_dict = load_json_files.load_json_files(dict_name)
+        old_dict = load_json_files(dict_name)
         indication, regex, row = item
         row_in_list = int(row)-1
         item_list = list(old_dict.items())
@@ -201,7 +200,7 @@ class ARM_Main(QtWidgets.QMainWindow):
         self._fill_source_tables()
 
     def _add_item_to_sources(self,dict_name,item):
-        old_dict = load_json_files.load_json_files(dict_name)
+        old_dict = load_json_files(dict_name)
         account, city_state, relevancy = item
         item_list = list(old_dict.items())
         item_list.append((account, [city_state, int(relevancy)]))
@@ -213,7 +212,7 @@ class ARM_Main(QtWidgets.QMainWindow):
     def _remove_table_item(self,table):
         row_in_list = int(table.currentRow())
         dict_name = self.table_source_dict[table]
-        old_dict = load_json_files.load_json_files (dict_name)
+        old_dict = load_json_files (dict_name)
         item_list = list (old_dict.items ())
         item_list.pop(row_in_list)
         new_dict = dict (item_list)
@@ -224,7 +223,7 @@ class ARM_Main(QtWidgets.QMainWindow):
     def _edit_table_item(self, table):
         #load the source of the table and turn it into a list
         dict_name = self.table_source_dict[table]
-        old_dict = load_json_files.load_json_files (dict_name)
+        old_dict = load_json_files (dict_name)
         item_list = list (old_dict.items ())
         #create dialog window with edit title
         self._create_dialog_window(dict_name)
@@ -386,18 +385,19 @@ class ARM_Main(QtWidgets.QMainWindow):
         location_data = listener.get_gmaps_data(address_info, city)
         return location_data
 
-    def fill_address_form(self,data: list):
-        address_no_number, house_nr, address_type, location_accuracy, coordinates \
-            = data
-        addr_list = self.address, self.house_number, self.location_accuracy,self.coordinates
-        for item in addr_list:
-            item.clear()
-        self.address_type.setCurrentText(address_type)
-        self.address.insertPlainText(address_no_number)
-        self.house_number.insertPlainText(house_nr)
-        if location_accuracy:
-            self.location_accuracy.setValue(int(location_accuracy))
-        self.coordinates.insertPlainText(coordinates)
+    def fill_address_form(self, data: list):
+        if data:
+            address_no_number, house_nr, address_type, location_accuracy, coordinates \
+                = data
+            addr_list = self.address, self.house_number, self.location_accuracy,self.coordinates
+            for item in addr_list:
+                item.clear()
+            self.address_type.setCurrentText(address_type)
+            self.address.insertPlainText(address_no_number)
+            self.house_number.insertPlainText(house_nr)
+            if location_accuracy:
+                self.location_accuracy.setValue(int(location_accuracy))
+            self.coordinates.insertPlainText(coordinates)
 
 
     # def get_address(self):

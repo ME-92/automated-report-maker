@@ -1,30 +1,28 @@
 {
     "reports": [
         {
-            "coordinates": "40.8046554,-73.9139601",
-            "all_indications": [
-                "Shot person (injured)"
-            ],
+            "coordinates": "",
+            "all_indications": [],
             "starting_time": [
                 "22",
-                "28"
+                "05"
             ],
             "time_accuracy": "",
-            "date": "7 February 2022",
+            "date": "6 March 2022",
             "duration": "",
-            "description": "Two persons were shot on 691 East 137th Street.",
-            "injured": 2,
+            "description": "",
+            "injured": "",
             "dead": "",
-            "source": "Twitter @NYC_Alerts911",
+            "source": "",
             "source_type": "Social Media",
             "relevancy": 1,
-            "link": "https://twitter.com/NYC_Alerts911/status/1490799734600179712",
+            "link": "",
             "address_type": "address",
-            "address": "East 137th Street ",
-            "house_nr": "691",
+            "address": "",
+            "house_nr": "",
             "location_accuracy": "",
-            "tweet_text": "Bronx | 691 E 137th St.\nConfirmed 2 people shot. Suspect fled w/b on E 137th St in a white BMW sedan.",
-            "city_state": "New York"
+            "tweet_text": "",
+            "city_state": ""
         }
     ]
 }

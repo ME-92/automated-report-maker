@@ -10,7 +10,7 @@ log.setLevel(logging.INFO)
 format = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s","%Y-%m-%d %H:%M:%S")
 format_2 = logging.Formatter('%(levelname)s - %(message)s')
 
-file_handler = logging.FileHandler('log.txt')
+file_handler = logging.FileHandler('arm/logger/log.txt')
 file_handler.setFormatter(format)
 
 stream_handler = logging.StreamHandler()

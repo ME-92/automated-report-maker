@@ -1,7 +1,7 @@
 
 import re
 from json_data.load_json_files import load_json_files
-from logger import log
+from logger.logger import log
 
 
 class Reader():
@@ -209,8 +209,8 @@ class Reader():
     def load_dictionaries(self):
         self.dictionary_abbreviations, self.indication_formulas, self.address_formulas, \
             self.dictionary_descriptions, self.dictionary_sources, self.dictionary_additional_facts\
-            = load_json_files.load_json_files()
+            = load_json_files()
         self.dictionary_numbers = {"1": "One", "2": "Two", "3": "Three", "4": "Four", "5": "Five", "6": "Six",
                                    "7": "Seven", "8": "Eight", "9": "Nine", "10": "Ten"}
 
-#Instance1=Reader()
+Instance1=Reader()

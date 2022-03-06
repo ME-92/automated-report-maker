@@ -8,8 +8,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchWindowException, WebDriverException
 
-import load_json_files
-from logger import log
+from json_data import load_json_files
+from logger.logger import log
 
 class AVABot:
 
@@ -21,7 +21,7 @@ class AVABot:
 
     def run_ava_bot(self):
         self._setup_driver()
-        with webdriver.Chrome(executable_path=self.chrome_path,options=self.options) as self.driver:
+        with webdriver.Chrome(executable_path=self.chrome_path, options=self.options) as self.driver:
             self.driver.maximize_window ()
             self.driver.get(self.ava_link)
             try:
@@ -49,7 +49,7 @@ class AVABot:
         self.options.add_experimental_option("detach", True)
         self.options.add_experimental_option ('excludeSwitches', ['enable-logging'])
         self.options.add_experimental_option("prefs", prefs)
-        self.chrome_path = os.path.abspath('chromedriver.exe')
+        self.chrome_path = os.path.abspath('arm/webcrawler/chromedriver.exe')
 
     def waiting_function(self,by_variable, attribute):
         try:
@@ -63,7 +63,7 @@ class AVABot:
         webdriver.ActionChains(self.driver).click(map_canvas).perform()
 
     def load_report_data(self):
-        with open('json_data/report_data.json', 'r') as file:
+        with open('arm/json_data/report_data.json', 'r') as file:
             self.report_data=json.load(file)
         for report in self.report_data['reports']:
             return report
@@ -233,4 +233,4 @@ class AVABot:
         except(NoSuchWindowException, WebDriverException):
             return
 
-#Instance=Tweet_bot()
+Instance=AVABot()
