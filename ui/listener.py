@@ -29,7 +29,7 @@ def read_tweet(link):
 #     return data
 
 def load_report_data():
-    with open('arm/json_data/report_data.json', 'r') as file:
+    with open('./json_data/report_data.json', 'r') as file:
         report_data=json.load(file)
         return report_data['reports'][0]
 
@@ -40,17 +40,17 @@ def load_settings_files():
     return load_json_files.load_settings()
 
 def to_report_data(data_from_ui):
-    with open('arm/json_data/report_data.json', 'w') as file:
+    with open('./json_data/report_data.json', 'w') as file:
         input_data={"reports":[data_from_ui]}
         json.dump(input_data,file, indent=4)
 
 def load_indications_json():
-    with open('arm/json_data/indications.json', 'r') as indications:
+    with open('./json_data/indications.json', 'r') as indications:
         data=json.load(indications)
         return data
 
 def write_to_json(dictionary,dict_name):
-    with open (f'arm/json_data/{dict_name}.json', 'w') as file:
+    with open (f'./json_data/{dict_name}.json', 'w') as file:
         input_data = {f"{dict_name}": dictionary}
         json.dump (input_data, file, indent=4)
 

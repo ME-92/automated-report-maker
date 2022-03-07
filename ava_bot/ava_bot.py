@@ -49,7 +49,7 @@ class AVABot:
         self.options.add_experimental_option("detach", True)
         self.options.add_experimental_option ('excludeSwitches', ['enable-logging'])
         self.options.add_experimental_option("prefs", prefs)
-        self.chrome_path = os.path.abspath('arm/webcrawler/chromedriver.exe')
+        self.chrome_path = os.path.abspath('./webcrawler/chromedriver.exe')
 
     def waiting_function(self,by_variable, attribute):
         try:
@@ -63,7 +63,7 @@ class AVABot:
         webdriver.ActionChains(self.driver).click(map_canvas).perform()
 
     def load_report_data(self):
-        with open('arm/json_data/report_data.json', 'r') as file:
+        with open('./json_data/report_data.json', 'r') as file:
             self.report_data=json.load(file)
         for report in self.report_data['reports']:
             return report

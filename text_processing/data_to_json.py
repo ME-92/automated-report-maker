@@ -87,7 +87,7 @@ class TweetToJson():
         return date.strftime(f'%e %B %Y').lstrip()
 
     def dict_to_json(self):
-        with open('arm/json_data/report_data.json', "w") as outfile:
+        with open('./json_data/report_data.json', "w") as outfile:
             json.dump(self.data, outfile, indent=4)
 
     def return_data(self):
