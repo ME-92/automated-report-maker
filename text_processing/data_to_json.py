@@ -9,15 +9,10 @@ from json_data.file_manager import write_report_json
 class TweetToJson():
 
     def __init__(self, data):
-        self.data = {"reports": []}
         self.tweet_text, self.tweet_time, self.tweet_date, self.link, self.city, self.description, \
             self.all_indications, self.main_indication, self.facts_injured, \
             self.facts_dead, self.address_type, self.address, self.coordinates, self.source, self.relevancy = data
-        self.data_to_dict()
-        self.dict_to_json()
-        self.return_data()
 
-    def data_to_dict(self):
         self._finalize_address()
         self._finalize_time_and_date()
         self._finalize_link()
@@ -60,7 +55,7 @@ class TweetToJson():
         # use webpage link to create a source text like ("news.com")
 
     def _fill_in_dict(self):
-        self.dict_to_JSON = {
+        self.report = {
             'coordinates': self.coordinates,
             'all_indications': self.all_indications,
             'starting_time': [self.starting_time_hour, self.starting_time_minute],
@@ -86,7 +81,5 @@ class TweetToJson():
         return date.strftime(f'%e %B %Y').lstrip()
 
     def dict_to_json(self):
-        write_report_json(self.dict_to_JSON)
+        write_report_json(self.report)
 
-    def return_data(self):
-        return self.data
