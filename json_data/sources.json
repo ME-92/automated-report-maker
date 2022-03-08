@@ -55,6 +55,10 @@
   "TPSOperations": [
    "Toronto, Ca",
    "3"
+  ],
+  "DenverPolice": [
+   "Denver, Colorado",
+   3
   ]
  }
 }

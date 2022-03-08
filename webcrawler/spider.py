@@ -133,7 +133,7 @@ class Spider():
         self.options.add_argument("--lang=en-EN")
         self.options.add_experimental_option('excludeSwitches', ['enable-logging'])
         self.options.add_experimental_option("prefs", prefs)
-        self.chrome_path = os.path.abspath('arm/webcrawler/chromedriver.exe')
+        self.chrome_path = os.path.abspath('./webcrawler/chromedriver.exe')
 
     def waiting_function(self, by_variable, attribute):
         try:

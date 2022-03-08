@@ -1,6 +1,8 @@
 
 import time
 import sys
+import os
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, QSortFilterProxyModel, QModelIndex, QItemSelectionModel, pyqtSignal, QThread, QRunnable, \
     QThreadPool, QObject
@@ -130,7 +132,8 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.ava_username.setPlainText(self.ava_username_value)
 
     def _set_directory(self):
-        response = QFileDialog.getExistingDirectory(self,caption="Choose the Google Chrome profile folder: ")
+        user_path = os.path.join(os.environ.get("USERPROFILE"), r"AppData\Local\Google\Chrome\User Data")
+        response = QFileDialog.getExistingDirectory(self,caption="Choose the Google Chrome profile folder: ", directory=user_path)
         if response:
             listener.edit_setting('user_profile_path', response)
         self._get_settings()
@@ -189,7 +192,7 @@ class ARM_Main(QtWidgets.QMainWindow):
                 error.exec_()
 
     def _add_item_to_table(self,dict_name,item):
-        old_dict = load_json_files(dict_name)
+        old_dict = load_json_files.load_json_files(dict_name)
         indication, regex, row = item
         row_in_list = int(row)-1
         item_list = list(old_dict.items())
@@ -200,7 +203,7 @@ class ARM_Main(QtWidgets.QMainWindow):
         self._fill_source_tables()
 
     def _add_item_to_sources(self,dict_name,item):
-        old_dict = load_json_files(dict_name)
+        old_dict = load_json_files.load_json_files(dict_name)
         account, city_state, relevancy = item
         item_list = list(old_dict.items())
         item_list.append((account, [city_state, int(relevancy)]))
@@ -212,7 +215,7 @@ class ARM_Main(QtWidgets.QMainWindow):
     def _remove_table_item(self,table):
         row_in_list = int(table.currentRow())
         dict_name = self.table_source_dict[table]
-        old_dict = load_json_files (dict_name)
+        old_dict = load_json_files.load_json_files (dict_name)
         item_list = list (old_dict.items ())
         item_list.pop(row_in_list)
         new_dict = dict (item_list)
@@ -223,7 +226,7 @@ class ARM_Main(QtWidgets.QMainWindow):
     def _edit_table_item(self, table):
         #load the source of the table and turn it into a list
         dict_name = self.table_source_dict[table]
-        old_dict = load_json_files (dict_name)
+        old_dict = load_json_files.load_json_files (dict_name)
         item_list = list (old_dict.items ())
         #create dialog window with edit title
         self._create_dialog_window(dict_name)

@@ -99,4 +99,4 @@ def fix_abbreviations(address):
 def run_bot():
     log.info("Starting AVA bot..")
     ava_bot.AVABot()
-    log.info("Report submitted, closing bot..")
+    #log.info("Report submitted, closing bot..")

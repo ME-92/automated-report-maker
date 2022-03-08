@@ -1,28 +1,32 @@
 {
     "reports": [
         {
-            "coordinates": "",
-            "all_indications": [],
+            "coordinates": "39.6906635,-105.0246565",
+            "all_indications": [
+                "Motorcycle vs. pedestrian collision",
+                "Injured person",
+                "Police investigation"
+            ],
             "starting_time": [
-                "22",
-                "05"
+                "04",
+                "04"
             ],
             "time_accuracy": "",
-            "date": "6 March 2022",
-            "duration": "",
-            "description": "",
-            "injured": "",
+            "date": "8 March 2022",
+            "duration": "120",
+            "description": "A hit and run incident involving a motorcycle and a pedestrian was reported in the 1400 block of South Federal Boulevard.",
+            "injured": 1,
             "dead": "",
-            "source": "",
+            "source": "Twitter @DenverPolice",
             "source_type": "Social Media",
-            "relevancy": 1,
-            "link": "",
-            "address_type": "address",
-            "address": "",
-            "house_nr": "",
+            "relevancy": 3,
+            "link": "https://twitter.com/DenverPolice/status/1501031039250014208",
+            "address_type": "block",
+            "address": "South Federal Boulevard",
+            "house_nr": "1400",
             "location_accuracy": "",
-            "tweet_text": "",
-            "city_state": ""
+            "tweet_text": "#TRAFFIC: #DPD is in the 1300-1400 BLK S Federal Blvd investigating a hit and run crash,motorist vs pedestrian. The pedestrian has been transported to a local hospital with serious but non-life threatening injuries. Alternate routes advised.",
+            "city_state": "Denver, Colorado"
         }
     ]
 }

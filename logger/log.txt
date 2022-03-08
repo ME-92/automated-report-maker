@@ -152,3 +152,269 @@
 2022-03-06 22:38:48 - INFO - Chrome Webdriver window manually closed.
 2022-03-06 22:39:09 - INFO - Chrome Webdriver window manually closed.
 2022-03-06 22:47:31 - INFO - Chrome Webdriver window manually closed.
+2022-03-07 23:28:04 - INFO - Starting AVA bot..
+2022-03-07 23:28:22 - INFO - Chrome Webdriver window manually closed.
+2022-03-07 23:28:24 - INFO - Report submitted, closing bot..
+2022-03-07 23:32:31 - INFO - Starting AVA bot..
+2022-03-07 23:37:07 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1500958937574690823
+2022-03-07 23:37:10 - INFO - Article content collected.
+2022-03-07 23:37:10 - INFO - Found address: '6700 S Jeffery' by using regex formula: '\d{1,4}00(s)?\s\w+\s[a-zA-Z0-9.]+\s?[a-zA-z0-9.]+'.
+2022-03-07 23:37:10 - INFO - Searching GMaps for: 6700 S Jeffery, Chicago,Il
+2022-03-07 23:37:17 - INFO - Searching for address and indication patterns in the article..
+2022-03-07 23:37:17 - INFO - Finalizing report data..
+2022-03-07 23:37:17 - INFO - Report creation took 10.99 secs.
+
+2022-03-07 23:38:01 - INFO - Starting AVA bot..
+2022-03-07 23:40:35 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1500964164994486274
+2022-03-07 23:40:38 - INFO - Article content collected.
+2022-03-07 23:40:38 - INFO - Found address: '11730 S Loomis' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-07 23:40:38 - INFO - Searching GMaps for: 11730 S Loomis, Chicago,Il
+2022-03-07 23:40:45 - INFO - Searching for address and indication patterns in the article..
+2022-03-07 23:40:45 - INFO - Finalizing report data..
+2022-03-07 23:40:45 - INFO - Report creation took 10.23 secs.
+
+2022-03-07 23:41:22 - INFO - Starting AVA bot..
+2022-03-07 23:42:38 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1500952757435572224
+2022-03-07 23:42:40 - INFO - Article content collected.
+2022-03-07 23:42:40 - INFO - Found address: '6600 S Morgan' by using regex formula: '\d{1,4}00(s)?\s\w+\s[a-zA-Z0-9.]+\s?[a-zA-z0-9.]+'.
+2022-03-07 23:42:40 - INFO - Searching GMaps for: 6600 S Morgan, Chicago,Il
+2022-03-07 23:42:47 - INFO - Searching for address and indication patterns in the article..
+2022-03-07 23:42:47 - INFO - Finalizing report data..
+2022-03-07 23:42:47 - INFO - Report creation took 10.34 secs.
+
+2022-03-07 23:43:04 - INFO - Starting AVA bot..
+2022-03-07 23:43:56 - INFO - Chrome Webdriver window manually closed.
+2022-03-07 23:45:33 - INFO - Starting AVA bot..
+2022-03-07 23:45:56 - INFO - Chrome Webdriver window manually closed.
+2022-03-08 00:11:24 - INFO - Reading tweet: https://twitter.com/ScannerDSM/status/1500971785860395011
+2022-03-08 00:11:26 - INFO - Article content collected.
+2022-03-08 00:11:26 - INFO - Found address: '1300 block of Buchanan' by using regex formula: '\d{1,4}00(s)?\s\w+\s[a-zA-Z0-9.]+\s?[a-zA-z0-9.]+'.
+2022-03-08 00:11:26 - INFO - Searching GMaps for: 1300 block of Buchanan, Des Moines
+2022-03-08 00:11:36 - ERROR - No valid address could be found on GMaps.
+2022-03-08 00:11:36 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 00:11:38 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 00:11:38 - INFO - No indications were found.
+2022-03-08 00:11:38 - INFO - Finalizing report data..
+2022-03-08 00:11:38 - INFO - Report creation took 15.37 secs.
+
+2022-03-08 00:12:37 - INFO - Looking for location: 1300 Buchanan St, Des Moines
+2022-03-08 00:12:44 - INFO - Found address: '1300 Buchanan Street' by using regex formula: '\d{1,4}00(s)?\s\w+\s[a-zA-Z0-9.]+\s?[a-zA-z0-9.]+'.
+2022-03-08 00:12:44 - INFO - Found address: 1300 Buchanan Street , address type: block
+2022-03-08 00:14:29 - INFO - Starting AVA bot..
+2022-03-08 00:15:30 - INFO - Reading tweet: https://twitter.com/NYC_Alerts911/status/1500973315921518592
+2022-03-08 00:15:32 - INFO - Article content collected.
+2022-03-08 00:15:32 - INFO - Found address: '1450 R' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 00:15:32 - INFO - Searching GMaps for: 1450 R, New York
+2022-03-08 00:15:42 - ERROR - No valid address could be found on GMaps.
+2022-03-08 00:15:42 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 00:15:44 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 00:15:44 - INFO - No indications were found.
+2022-03-08 00:15:44 - INFO - Finalizing report data..
+2022-03-08 00:15:44 - INFO - Report creation took 14.72 secs.
+
+2022-03-08 00:16:39 - INFO - Looking for location:  1450 Rockaway Pkwy, New York
+2022-03-08 00:16:46 - INFO - Found address: '1450 R' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 00:16:46 - INFO - Found address: 1450 Rockaway Parkway, address type: address
+2022-03-08 00:18:09 - INFO - Starting AVA bot..
+2022-03-08 01:15:56 - INFO - Reading tweet: https://twitter.com/NYC_Alerts911/status/1500985217355595780
+2022-03-08 01:15:58 - INFO - Article content collected.
+2022-03-08 01:15:58 - INFO - Found address: '214 E 165th' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 01:15:58 - INFO - Searching GMaps for: 214 E 165th, New York
+2022-03-08 01:16:04 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 01:16:04 - INFO - Finalizing report data..
+2022-03-08 01:16:04 - INFO - Report creation took 9.16 secs.
+
+2022-03-08 01:16:18 - INFO - Starting AVA bot..
+2022-03-08 01:17:47 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1500981798351917060
+2022-03-08 01:17:49 - INFO - Article content collected.
+2022-03-08 01:17:49 - INFO - Found address: '708 W 118th' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 01:17:49 - INFO - Searching GMaps for: 708 W 118th, Chicago,Il
+2022-03-08 01:17:56 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 01:17:56 - INFO - Finalizing report data..
+2022-03-08 01:17:56 - INFO - Report creation took 9.61 secs.
+
+2022-03-08 01:18:06 - INFO - Starting AVA bot..
+2022-03-08 01:18:48 - INFO - Reading tweet: https://twitter.com/NYC_Alerts911/status/1500980620415152137
+2022-03-08 01:18:50 - INFO - Article content collected.
+2022-03-08 01:18:50 - INFO - Found address: '925 L' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 01:18:50 - INFO - Searching GMaps for: 925 L, New York
+2022-03-08 01:18:59 - ERROR - No valid address could be found on GMaps.
+2022-03-08 01:18:59 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 01:19:02 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 01:19:02 - INFO - No indications were found.
+2022-03-08 01:19:02 - INFO - Finalizing report data..
+2022-03-08 01:19:02 - INFO - Report creation took 14.55 secs.
+
+2022-03-08 01:19:09 - INFO - Looking for location: 925 925 Livonia Ave., New York
+2022-03-08 01:19:16 - INFO - Found address: 40 Wiz Khalifa Smoke Shop and @.6665283, address type: 
+2022-03-08 01:19:22 - INFO - Looking for location:  925 Livonia Ave., New York
+2022-03-08 01:19:30 - INFO - Found address: '925 L' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 01:19:30 - INFO - Found address: 925 Livonia Avenue, address type: address
+2022-03-08 01:20:13 - INFO - Starting AVA bot..
+2022-03-08 01:21:12 - INFO - Reading tweet: https://twitter.com/NEO_Scan/status/1500979864731631616
+2022-03-08 01:21:14 - INFO - Article content collected.
+2022-03-08 01:21:14 - INFO - Found address: ' E86 & Superior ' by using regex formula: '[a-zA-Z0-9.\s]{2,}([/]|( and )|(&)|( \\+ ))[a-zA-Z0-9\s]{3,}'.
+2022-03-08 01:21:14 - INFO - Searching GMaps for:  E86 & Superior , Cleveland, Ohio
+2022-03-08 01:21:23 - ERROR - No valid address could be found on GMaps.
+2022-03-08 01:21:23 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 01:21:26 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 01:21:26 - INFO - Finalizing report data..
+2022-03-08 01:21:26 - INFO - Report creation took 15.08 secs.
+
+2022-03-08 01:21:44 - INFO - Looking for location:  E86 and Superior, Cleveland, Ohio
+2022-03-08 01:21:54 - ERROR - No valid address could be found on GMaps.
+2022-03-08 01:21:56 - ERROR - No address can be found using the address info.
+2022-03-08 01:23:45 - INFO - Reading tweet: https://twitter.com/NEO_Scan/status/1500977877088673798
+2022-03-08 01:23:47 - INFO - Article content collected.
+2022-03-08 01:23:47 - INFO - Found address: '12200s Cooley' by using regex formula: '\d{1,4}00(s)?\s\w+(\s\w+)?'.
+2022-03-08 01:23:47 - INFO - Searching GMaps for: 12200s Cooley, Cleveland, Ohio
+2022-03-08 01:23:54 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 01:23:54 - INFO - Finalizing report data..
+2022-03-08 01:23:54 - INFO - Report creation took 9.68 secs.
+
+2022-03-08 01:24:12 - INFO - Starting AVA bot..
+2022-03-08 03:49:35 - INFO - Reading tweet: https://twitter.com/NYC_Alerts911/status/1500980620415152137
+2022-03-08 03:49:37 - INFO - Article content collected.
+2022-03-08 03:49:37 - INFO - Found address: '925 L' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 03:49:37 - INFO - Searching GMaps for: 925 L, New York
+2022-03-08 03:49:47 - ERROR - No valid address could be found on GMaps.
+2022-03-08 03:49:47 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 03:49:49 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 03:49:49 - INFO - No indications were found.
+2022-03-08 03:49:49 - INFO - Finalizing report data..
+2022-03-08 03:49:49 - INFO - Report creation took 15.14 secs.
+
+2022-03-08 03:50:00 - INFO - Looking for location: 925 925 Livonia Ave., New York
+2022-03-08 03:50:07 - INFO - Found address: 40 Wiz Khalifa Smoke Shop and @.6665283, address type: 
+2022-03-08 03:51:48 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1500981798351917060
+2022-03-08 03:51:50 - INFO - Article content collected.
+2022-03-08 03:51:50 - INFO - Found address: '708 W 118th' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 03:51:50 - INFO - Searching GMaps for: 708 W 118th, Chicago,Il
+2022-03-08 03:51:57 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 03:51:57 - INFO - Finalizing report data..
+2022-03-08 03:51:57 - INFO - Report creation took 10.02 secs.
+
+2022-03-08 03:52:04 - INFO - Starting AVA bot..
+2022-03-08 03:52:48 - INFO - Chrome Webdriver window manually closed.
+2022-03-08 03:53:03 - INFO - Reading tweet: https://twitter.com/NYC_Alerts911/status/1500985217355595780
+2022-03-08 03:53:05 - INFO - Article content collected.
+2022-03-08 03:53:05 - INFO - Found address: '214 E 165th' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 03:53:05 - INFO - Searching GMaps for: 214 E 165th, New York
+2022-03-08 03:53:11 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 03:53:11 - INFO - Finalizing report data..
+2022-03-08 03:53:11 - INFO - Report creation took 9.04 secs.
+
+2022-03-08 03:53:31 - INFO - Starting AVA bot..
+2022-03-08 03:54:00 - INFO - Chrome Webdriver window manually closed.
+2022-03-08 03:54:20 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1500991019244007428
+2022-03-08 03:54:22 - INFO - Article content collected.
+2022-03-08 03:54:22 - INFO - Found address: '12254 S Halsted' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 03:54:22 - INFO - Searching GMaps for: 12254 S Halsted, Chicago,Il
+2022-03-08 03:54:28 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 03:54:28 - INFO - Finalizing report data..
+2022-03-08 03:54:28 - INFO - Report creation took 9.04 secs.
+
+2022-03-08 03:54:38 - INFO - Starting AVA bot..
+2022-03-08 03:54:58 - INFO - Chrome Webdriver window manually closed.
+2022-03-08 03:55:23 - INFO - Starting AVA bot..
+2022-03-08 03:56:36 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1500997092642365446
+2022-03-08 03:56:38 - INFO - Article content collected.
+2022-03-08 03:56:38 - INFO - Found address: '4739 W Washington' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 03:56:38 - INFO - Searching GMaps for: 4739 W Washington, Chicago,Il
+2022-03-08 03:56:44 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 03:56:44 - INFO - Finalizing report data..
+2022-03-08 03:56:44 - INFO - Report creation took 9.21 secs.
+
+2022-03-08 03:56:53 - INFO - Starting AVA bot..
+2022-03-08 03:57:47 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1501006846848647169
+2022-03-08 03:57:49 - INFO - Article content collected.
+2022-03-08 03:57:49 - INFO - Found address: '7835 S Lowe' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 03:57:49 - INFO - Searching GMaps for: 7835 S Lowe, Chicago,Il
+2022-03-08 03:57:56 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 03:57:56 - INFO - Finalizing report data..
+2022-03-08 03:57:56 - INFO - Report creation took 9.7 secs.
+
+2022-03-08 03:58:03 - INFO - Starting AVA bot..
+2022-03-08 03:58:57 - INFO - Reading tweet: https://twitter.com/SPOTNEWSonIG/status/1501016877757345794
+2022-03-08 03:58:59 - INFO - Article content collected.
+2022-03-08 03:58:59 - INFO - Found address: '10 r' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 03:58:59 - INFO - Searching GMaps for: 10 r, Chicago,Il
+2022-03-08 03:59:08 - ERROR - No valid address could be found on GMaps.
+2022-03-08 03:59:08 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 03:59:11 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 03:59:11 - INFO - Finalizing report data..
+2022-03-08 03:59:11 - INFO - Report creation took 15.0 secs.
+
+2022-03-08 03:59:23 - INFO - Looking for location:  7914 S Chappel, Chicago,Il
+2022-03-08 03:59:30 - INFO - Found address: '7914 S' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 03:59:30 - INFO - Found address: 7914 South Chappel Avenue, address type: address
+2022-03-08 04:00:09 - INFO - Starting AVA bot..
+2022-03-08 04:01:51 - INFO - Reading tweet: https://twitter.com/TPSOperations/status/1500976431945424904
+2022-03-08 04:01:53 - INFO - Article content collected.
+2022-03-08 04:01:53 - INFO - Found address: '432964
+' by using regex formula: '\d{2,6}\s[a-zA-Z0-9]*\s?'.
+2022-03-08 04:01:53 - INFO - Searching GMaps for: 432964
+, Toronto, Ca
+2022-03-08 04:02:03 - ERROR - No valid address could be found on GMaps.
+2022-03-08 04:02:03 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 04:02:05 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 04:02:05 - INFO - Finalizing report data..
+2022-03-08 04:02:05 - INFO - Report creation took 14.49 secs.
+
+2022-03-08 04:02:29 - INFO - Looking for location:  Elinor Ave & Joy Dr, Toronto, Ca
+2022-03-08 04:03:40 - ERROR - css selector input[id="searchboxinput"] not found
+2022-03-08 04:03:42 - ERROR - No address can be found using the address info.
+2022-03-08 04:05:41 - INFO - Starting AVA bot..
+2022-03-08 04:06:38 - INFO - Reading tweet: https://twitter.com/TPSOperations/status/1501010050269253637
+2022-03-08 04:06:40 - INFO - Article content collected.
+2022-03-08 04:06:40 - INFO - Found address: '433694
+' by using regex formula: '\d{2,6}\s[a-zA-Z0-9]*\s?'.
+2022-03-08 04:06:40 - INFO - Searching GMaps for: 433694
+, Toronto, Ca
+2022-03-08 04:06:49 - ERROR - No valid address could be found on GMaps.
+2022-03-08 04:06:49 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 04:06:51 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 04:06:51 - INFO - Finalizing report data..
+2022-03-08 04:06:51 - INFO - Report creation took 14.63 secs.
+
+2022-03-08 04:09:28 - INFO - Starting AVA bot..
+2022-03-08 04:10:27 - INFO - Reading tweet: https://twitter.com/MEM_PoliceDept/status/1501018856508334081
+2022-03-08 04:10:30 - INFO - Article content collected.
+2022-03-08 04:10:30 - INFO - Found address: '40 p' by using regex formula: '\d{2,6}\s(\w|\w+)(\s\w{4,})?'.
+2022-03-08 04:10:30 - INFO - Searching GMaps for: 40 p, Memphis, Tn
+2022-03-08 04:10:39 - ERROR - No valid address could be found on GMaps.
+2022-03-08 04:10:39 - INFO - Location was not found. Please enter the coordinates manually.
+2022-03-08 04:10:42 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 04:10:42 - INFO - Finalizing report data..
+2022-03-08 04:10:42 - INFO - Report creation took 15.1 secs.
+
+2022-03-08 04:10:50 - INFO - Looking for location:  4th and Jefferson, Memphis, Tn
+2022-03-08 04:11:01 - ERROR - No valid address could be found on GMaps.
+2022-03-08 04:11:03 - ERROR - No address can be found using the address info.
+2022-03-08 04:13:45 - INFO - Starting AVA bot..
+2022-03-08 04:22:13 - INFO - Reading tweet: https://twitter.com/DenverPolice/status/1501026744291127296
+2022-03-08 04:22:15 - INFO - Article content collected.
+2022-03-08 04:22:15 - INFO - Couldn't find the city in the sources database.
+2022-03-08 04:22:15 - INFO - Found address: 'male located and transported to' by using regex formula: '\w+\s(\w+)([\/]|( and )|(&)|( \\+ ))\w+ (\w+)?'.
+2022-03-08 04:22:15 - INFO - Missing location data, please enter the city and address and run Gmaps manually.
+2022-03-08 04:22:17 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 04:22:17 - INFO - Twitter account is unknown, please add location and trust score manually.
+2022-03-08 04:22:17 - INFO - Couldn't find the trust score in the sources database.
+2022-03-08 04:22:17 - INFO - Couldn't find the city in the sources database.
+2022-03-08 04:22:17 - INFO - Finalizing report data..
+2022-03-08 04:22:17 - INFO - Report creation took 4.95 secs.
+
+2022-03-08 04:22:50 - INFO - Looking for location:  E 34th Ave / N Forest St, Denver, Co
+2022-03-08 04:22:57 - INFO - Found address: '34th Avenue  and  Forest St and ' by using regex formula: '[a-zA-Z0-9.\s]{2,}([/]|( and )|(&)|( \\+ ))[a-zA-Z0-9\s]{3,}'.
+2022-03-08 04:22:57 - INFO - Found address:  34th Avenue , address type: lat/long
+2022-03-08 04:25:00 - INFO - Starting AVA bot..
+2022-03-08 04:30:13 - INFO - Reading tweet: https://twitter.com/DenverPolice/status/1501031039250014208
+2022-03-08 04:30:15 - INFO - Article content collected.
+2022-03-08 04:30:15 - INFO - Found address: '1400 BLK S Federal' by using regex formula: '\d{1,4}00(s)?\s\w+\s[a-zA-Z0-9.]+\s?[a-zA-z0-9.]+'.
+2022-03-08 04:30:15 - INFO - Searching GMaps for: 1400 BLK S Federal, Denver, Colorado
+2022-03-08 04:30:21 - INFO - Searching for address and indication patterns in the article..
+2022-03-08 04:30:21 - INFO - No indications were found.
+2022-03-08 04:30:21 - INFO - Finalizing report data..
+2022-03-08 04:30:21 - INFO - Report creation took 9.33 secs.
+
+2022-03-08 04:32:42 - INFO - Starting AVA bot..
