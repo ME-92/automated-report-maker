@@ -17,6 +17,7 @@ class TweetToJson():
         self._finalize_time_and_date()
         self._finalize_link()
         self._fill_in_dict()
+        self._dict_to_json()
 
     def _finalize_address(self):
         self.location_accuracy = ''
@@ -45,7 +46,7 @@ class TweetToJson():
             log.error("Tweet time was not found.")
             self.starting_time_hour, self.starting_time_minute = '', ''
         try:
-            self.tweet_date = self.date_fixer(self.tweet_date)
+            self.tweet_date = self._date_fixer(self.tweet_date)
         except:
             log.info("Date was not found.")
             self.tweet_date = ''
@@ -76,10 +77,10 @@ class TweetToJson():
             'duration': "",
             'time_accuracy': ""}
 
-    def date_fixer(self, date_raw: str):
+    def _date_fixer(self, date_raw: str):
         date = datetime.strptime(date_raw, r' %d %b %Y')
         return date.strftime(f'%e %B %Y').lstrip()
 
-    def dict_to_json(self):
+    def _dict_to_json(self):
         write_report_json(self.report)
 
