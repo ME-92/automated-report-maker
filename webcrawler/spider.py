@@ -2,23 +2,19 @@ import os
 import re
 
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException, InvalidSessionIdException, \
-    SessionNotCreatedException, InvalidArgumentException
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, InvalidArgumentException
 
-from json_data import load_json_files
+from json_data.file_manager import load_settings
 from text_processing.text_reader import Reader
 from logger.logger import log
- 
-import time
 
 
-class Spider():
+class Spider:
 
     def __init__(self) -> None:
-        self.chrome_profile_dir, self.run_headless, self.load_images, self.time_zone, __ = load_json_files.load_settings()
+        self.chrome_profile_dir, self.run_headless, self.load_images, self.time_zone, __ = load_settings()
 
     def scrape_webpages(self, link):
         self.link = link
@@ -80,7 +76,7 @@ class Spider():
     def scrape_gmaps_for_address(self, address, city):
         self.driver.get("https://www.google.com/maps/")
         self.waiting_function('css selector', 'input[id="searchboxinput"]')
-        enter_address = self.driver.find_element_by_css_selector('input[id="searchboxinput"]')
+        enter_address = self.driver.find_element('css selector', 'input[id="searchboxinput"]')
         enter_address.send_keys(f"{address}, {city}")
         self.driver.find_element('css selector', 'button[id="searchbox-searchbutton"]').click()
         try:
@@ -118,7 +114,6 @@ class Spider():
     def _scrape_tweet_time_and_date(self):
         self.waiting_function('css selector', 'a[role="link"].innerText()')
         date_time = self.driver.find_element('css selector', "a[role='link']").innerText
-        print(date_time)
         tweet_time, tweet_date = date_time.split('·')[0], date_time.split('·')[1]
         return tweet_time, tweet_date
 

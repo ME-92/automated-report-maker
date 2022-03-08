@@ -1,32 +1,30 @@
 {
     "reports": [
         {
-            "coordinates": "39.6906635,-105.0246565",
+            "coordinates": "41.7498638,-87.6636695",
             "all_indications": [
-                "Motorcycle vs. pedestrian collision",
-                "Injured person",
-                "Police investigation"
+                "Shots fired"
             ],
             "starting_time": [
-                "04",
-                "04"
+                "10",
+                "45"
             ],
             "time_accuracy": "",
             "date": "8 March 2022",
-            "duration": "120",
-            "description": "A hit and run incident involving a motorcycle and a pedestrian was reported in the 1400 block of South Federal Boulevard.",
-            "injured": 1,
+            "duration": "",
+            "description": "Shots fired have been reported on 7914 South Ashland Avenue.",
+            "injured": "",
             "dead": "",
-            "source": "Twitter @DenverPolice",
+            "source": "Twitter @SPOTNEWSonIG",
             "source_type": "Social Media",
-            "relevancy": 3,
-            "link": "https://twitter.com/DenverPolice/status/1501031039250014208",
-            "address_type": "block",
-            "address": "South Federal Boulevard",
-            "house_nr": "1400",
+            "relevancy": 1,
+            "link": "https://twitter.com/SPOTNEWSonIG/status/1501132038761496577",
+            "address_type": "address",
+            "address": "South Ashland Avenue",
+            "house_nr": "7914",
             "location_accuracy": "",
-            "tweet_text": "#TRAFFIC: #DPD is in the 1300-1400 BLK S Federal Blvd investigating a hit and run crash,motorist vs pedestrian. The pedestrian has been transported to a local hospital with serious but non-life threatening injuries. Alternate routes advised.",
-            "city_state": "Denver, Colorado"
+            "tweet_text": "Shot fired, 7914 S Ashland. #ShotSpotter #ChicagoScanner",
+            "city_state": "Chicago,Il"
         }
     ]
 }

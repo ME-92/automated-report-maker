@@ -3,7 +3,7 @@
   "\\d{1,4}00(s)?\\s\\w+\\s[a-zA-Z0-9.]+\\s?[a-zA-z0-9.]+": "block",
   "\\d{1,4}00(s)?\\sblock of\\s[a-zA-Z0-9]+": "block",
   "\\d{1,4}00(s)?\\s\\w+(\\s\\w+)?": "block",
-  "\\d{2,6}\\s(\\w|\\w+)(\\s\\w{4,})?": "address",
+  "[\\d-]{2,6}(\\s\\w)?\\s\\w{4,}(\\s\\w+)?": "address",
   "\\d{2,6}\\s[a-zA-Z0-9.]*\\s?(\\w+\\s)?(Ave|St(\\.)?)": "address",
   "\\d{2,6}\\s[a-zA-Z0-9.]\\s[a-zA-Z0-9]+\\s?(Ave|St(.)?)?": "address",
   "\\d{2,6}\\s[a-zA-Z0-9.]*\\s?(Ave|St(.)?)": "address",

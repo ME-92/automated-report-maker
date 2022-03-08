@@ -1,9 +1,9 @@
 import re
-import json
 
 from datetime import datetime
 
 from logger.logger import log
+from json_data.file_manager import write_report_json
 
 
 class TweetToJson():
@@ -27,12 +27,12 @@ class TweetToJson():
         self.location_accuracy = ''
         if self.address_type != 'lat/long':
             try:
-                self.house_nr = re.search('\d+', self.address).group()
+                self.house_nr = re.search("[\d-]{2,6}", self.address).group()
                 self.address_no_number = re.sub(self.house_nr, '', self.address).lstrip()
             except:
                 log.info("House number was not found in the address.")
-                self.house_nr = ""
-                self.address_no_number = ""
+                self.house_nr = ''
+                self.address_no_number = ''
         elif self.address_type == 'lat/long':
             self.address_no_number = self.address.split(' and ')[0]
             self.house_nr = ''
@@ -48,7 +48,7 @@ class TweetToJson():
             self.starting_time_hour, self.starting_time_minute = datetime.strftime(self.starting_time,"%H"), datetime.strftime(self.starting_time, "%M")
         except:
             log.error("Tweet time was not found.")
-            self.starting_time_hour, self.starting_time_minute = "", ""
+            self.starting_time_hour, self.starting_time_minute = '', ''
         try:
             self.tweet_date = self.date_fixer(self.tweet_date)
         except:
@@ -80,15 +80,13 @@ class TweetToJson():
             'relevancy': self.relevancy,
             'duration': "",
             'time_accuracy': ""}
-        self.data['reports'].append(self.dict_to_JSON)
 
     def date_fixer(self, date_raw: str):
         date = datetime.strptime(date_raw, r' %d %b %Y')
         return date.strftime(f'%e %B %Y').lstrip()
 
     def dict_to_json(self):
-        with open('./json_data/report_data.json', "w") as outfile:
-            json.dump(self.data, outfile, indent=4)
+        write_report_json(self.dict_to_JSON)
 
     def return_data(self):
         return self.data
