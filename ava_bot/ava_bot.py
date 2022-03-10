@@ -53,7 +53,7 @@ class AVABot:
 
     def waiting_function(self, by_variable, attribute):
         try:
-            WebDriverWait(self.driver, 10).until(lambda x: x.find_element(by=by_variable, value=attribute))
+            WebDriverWait(self.driver, 5).until(lambda x: x.find_element(by=by_variable, value=attribute))
         except (NoSuchElementException, TimeoutException):
             print('{} {} not found'.format(by_variable, attribute))
             exit()
@@ -88,13 +88,17 @@ class AVABot:
         location_briefing_button = self.driver.find_element('xpath',
                                                             "//button[contains(text(), ' Location briefing ')]")
         interest_sets_button = self.driver.find_element('xpath', "//button[contains(text(), 'Interest sets')]")
+        recent_button = self.driver.find_element('xpath', "//button[contains(text(), ' Recent ')]")
         time.sleep(1)
         if 'active' in location_briefing_button.get_attribute('class').split():
-            print('Button is active, clicking..')
+            print('Location briefing button is active, deactivating..')
             location_briefing_button.click()
         if 'active' in interest_sets_button.get_attribute('class').split():
-            print('Button is active, clicking..')
+            print('Interest sets button is active, deactivating..')
             interest_sets_button.click()
+        if 'active' in recent_button.get_attribute('class').split():
+            print('Recent button active, deactivating..')
+            recent_button.click()
 
     def go_to_coordinates(self):
         # press search button

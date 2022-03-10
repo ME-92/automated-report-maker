@@ -44,10 +44,10 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.threadpool = QThreadPool()
         self.threadpool.start(worker1)
         self.threadpool.start(prog_bar)
-        prog_bar.signals.start_sig.connect(self.start_prog_bar)
-        prog_bar.signals.change_value.connect(self.change_prog_value)
+        prog_bar.signals.start_sig.connect(self.tweet_progress_bar.start_prog_bar)
+        prog_bar.signals.change_value.connect(self.tweet_progress_bar.change_prog_value)
         worker1.signals.result.connect(self.load_data_from_dict)
-        worker1.signals.result.connect(self.end_prog_bar)
+        worker1.signals.result.connect(self.tweet_progress_bar.end_prog_bar)
 
     def run_bot_thread(self):
         bot_worker = Worker(listener.run_bot)
@@ -56,8 +56,14 @@ class ARM_Main(QtWidgets.QMainWindow):
 
     def get_address_thread(self):
         get_loc_data = Worker(self.get_address)
+        prog_bar = ProgBar()
+        self.threadpool = QThreadPool()
         self.threadpool.start(get_loc_data)
+        self.threadpool.start(prog_bar)
+        prog_bar.signals.start_sig.connect(self.gmaps_prog_bar.start_prog_bar)
+        prog_bar.signals.change_value.connect(self.gmaps_prog_bar.change_prog_value)
         get_loc_data.signals.result.connect(self.fill_address_form)
+        get_loc_data.signals.result.connect(self.gmaps_prog_bar.end_prog_bar)
 
     def _set_tooltips(self):
         dictionary_tooltips = {self.clear_indications: "Clears selected indications",
@@ -72,7 +78,7 @@ class ARM_Main(QtWidgets.QMainWindow):
                                self.emergency_services: "Emergency responders at the scene",
                                self.run_bot: "Runs the Bot and takes you to AVA Center, if all needed information is present",
                                self.console: "", self.account: "Twitter account taken from the link",
-                               self.time: "Event time", self.gmaps_button: "Searches for coordinates on Google Maps",
+                               self.time: "Event time", self.gmaps_button: "Searches for coordinates on Google Maps using the specified address and city/state",
                                self.source: "Source of information",
                                self.time_accuracy: "Accuracy of the time of the incident in minutes",
                                self.house_number: "House number", self.date: "Event date",
@@ -101,7 +107,7 @@ class ARM_Main(QtWidgets.QMainWindow):
                                self.label_time_duration: "Duration (min):", self.label_address_type: "Address type:",
                                self.label_account: "Account info:", self.label_time_and_date: "Time and date:",
                                self.label_tweet_link: "Source link:", self.enter_tweet_link: "[Enter]",
-                               self.paste_link: "Paste", self.tweet_link_clear: "Reset",
+                               self.paste_link: "Paste", self.tweet_link_clear: "Reset", self.gmaps_button: "GMaps",
                                self.label_datum: "Indications:", self.remove_regex_indication_formula: "-",
                                self.add_regex_indication_formula: "+", self.edit_regex_indication_formula: "Edit",
                                self.regex_formulas_label: "Regex formulas:",
@@ -443,10 +449,11 @@ class ARM_Main(QtWidgets.QMainWindow):
             row += 1
 
     def get_address(self):
-        address_info = f"{self.house_number.toPlainText()} {self.address.toPlainText()}"
-        city = self.city_state.toPlainText()
-        location_data = listener.get_gmaps_data(address_info, city)
-        return location_data
+        house_nr, address, city = self.house_number.toPlainText(), self.address.toPlainText(), self.city_state.toPlainText()
+        address_info = f"{house_nr} {address}"
+        if address_info and city:
+            location_data = listener.get_gmaps_data(address_info, city)
+            return location_data
 
     def fill_address_form(self, data: list):
         if data:
@@ -499,11 +506,11 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.table_source_dict = {self.regex_indication_formulas_table: "indication_formulas",
                                   self.regex_address_formulas_table: "address_formulas",
                                   self.twitter_accounts_table: "sources", self.templates_table: "descriptions"}
-        self.empty_tweet = {
-            'coordinates': '', 'all_indications': '', 'starting_time': [0, 0], 'time_accuracy': '', 'date': '',
-            'duration': '', 'description': '', 'injured': '', 'dead': '', 'source': '', 'source_type': '',
-            'relevancy': '', 'link': '', 'address_type': '', 'address': '', 'house_nr': '', 'location_accuracy': '',
-            'tweet_text': '', 'city_state': ''}
+        # self.empty_tweet = {
+        #     'coordinates': '', 'all_indications': '', 'starting_time': [0, 0], 'time_accuracy': '', 'date': '',
+        #     'duration': '', 'description': '', 'injured': '', 'dead': '', 'source': '', 'source_type': '',
+        #     'relevancy': '', 'link': '', 'address_type': '', 'address': '', 'house_nr': '', 'location_accuracy': '',
+        #     'tweet_text': '', 'city_state': ''}
     def _get_settings(self):
         self.chrome_profile_dir_setting, self.run_minimized_setting, \
             self.load_images_setting, self.time_zone_setting, self.ava_username_value = file_manager.load_settings()
@@ -528,7 +535,12 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.toggle_indications()
 
     def get_data(self):
-        self.tweet_data = self.empty_tweet
+        self.tweet_data = {
+                'coordinates': '', 'all_indications': '', 'starting_time': [0, 0], 'time_accuracy': '', 'date': '',
+                'duration': '', 'description': '', 'injured': '', 'dead': '', 'source': '', 'source_type': '',
+                'relevancy': '', 'link': '', 'address_type': '', 'address': '', 'house_nr': '', 'location_accuracy': '',
+                'tweet_text': '', 'city_state': ''}
+
         self.tweet_data['time_accuracy'] = self.time_accuracy.toPlainText()
         self.tweet_data['address'] = self.address.toPlainText()
         self.tweet_data['address_type'] = self.address_type.currentText()
@@ -684,11 +696,7 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.time.setGeometry(QtCore.QRect(400, 210, 111, 31))
         self.time.setObjectName("time")
         self.gmaps_button = QtWidgets.QPushButton(self.Report)
-        self.gmaps_button.setGeometry(QtCore.QRect(810, 10, 41, 31))
-        icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap(":/icons/A.R.M. icons/earth.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.gmaps_button.setIcon(icon10)
-        self.gmaps_button.setIconSize(QtCore.QSize(24, 24))
+        self.gmaps_button.setGeometry(QtCore.QRect(800, 10, 51, 31))
         self.gmaps_button.setObjectName("gmaps_button")
         self.label_trust_score = QtWidgets.QLabel(self.Report)
         self.label_trust_score.setGeometry(QtCore.QRect(400, 80, 71, 21))
@@ -840,7 +848,6 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.menu_tab.addTab(self.Report, icon11, "Report")
         self.Sources = QtWidgets.QWidget()
         self.Sources.setObjectName("Sources")
-        # self.Sources.setText("Sources")
         icon12 = QtGui.QIcon()
         icon12.addPixmap(QtGui.QPixmap(":/icons/A.R.M. icons/book.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.menu_tab.addTab(self.Sources, icon12, "Sources")
@@ -993,32 +1000,47 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.msgbox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
         self.msgbox.setWindowTitle('A.R.M.')
 
-        self.tweet_progress_bar = QtWidgets.QProgressBar(self.Report)
-        self.tweet_progress_bar.setGeometry(QtCore.QRect(117, 10, 171, 21))
-        self.tweet_progress_bar.setObjectName("tweet_progress_bar")
-        self.tweet_progress_bar.setMaximum(120)
-        self.tweet_progress_bar.setVisible(False)
-
         self.console = QtWidgets.QPlainTextEdit(self.Report)
         self.console.setGeometry(QtCore.QRect(590, 340, 261, 181))
         self.console.setObjectName("console")
         self.console.setReadOnly(True)
+        #progress bars
+        self.tweet_progress_bar = ProgressBar((QtCore.QRect(117, 10, 171, 21)), 120, self.enter_tweet_link, self.Report)
+        self.gmaps_prog_bar = ProgressBar((QtCore.QRect(610, 10, 171, 21)), 120, self.gmaps_button, self.Report)
+
+
+class ProgressBar:
+
+    def __init__(self, dimensions:QtCore.QRect, max_size, button, parent):
+        super().__init__()
+        self.dimensions = dimensions
+        self.max_size = max_size
+        self.button = button
+        self.parent = parent
+        self.setup_prog_bar()
+
+    def setup_prog_bar(self):
+        self.prog_bar = QtWidgets.QProgressBar(self.parent)
+        self.prog_bar.setGeometry(QtCore.QRect(self.dimensions))
+        self.prog_bar.setValue(self.max_size)
+        self.prog_bar.setVisible(False)
 
     def start_prog_bar(self):
-        self.tweet_progress_bar.setVisible(True)
-        self.tweet_progress_bar.setValue(0)
-        self.enter_tweet_link.setEnabled(False)
+        self.prog_bar.setVisible(True)
+        self.prog_bar.setValue(0)
+        self.button.setEnabled(False)
 
     def change_prog_value(self, val):
-        self.tweet_progress_bar.setValue(val)
+        self.prog_bar.setValue(val)
 
     def end_prog_bar(self):
-        self.tweet_progress_bar.setValue(100)
-        self.tweet_progress_bar.setVisible(False)
-        self.enter_tweet_link.setEnabled(True)
+        self.prog_bar.setValue(100)
+        self.prog_bar.setVisible(False)
+        self.button.setEnabled(True)
 
 
 class ProgBar(QRunnable):
+
     def __init__(self):
         super(ProgBar, self).__init__()
         self.signals = WorkerSignals()
@@ -1028,7 +1050,7 @@ class ProgBar(QRunnable):
     def run(self):
         self.signals.start_sig.emit()
         cnt = 0
-        while cnt < 113:
+        while cnt < 120:
             cnt += 1
             time.sleep(0.1)
             self.signals.change_value.emit(cnt)
