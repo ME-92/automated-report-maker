@@ -41,9 +41,9 @@ class ARM_Main(QtWidgets.QMainWindow):
     def read_tweet_thread(self):
         worker1 = Worker(self.read_tweet_from_link)
         prog_bar = ProgBar()
-        self.threadpool = QThreadPool()
-        self.threadpool.start(worker1)
-        self.threadpool.start(prog_bar)
+        self.threadpool1 = QThreadPool()
+        self.threadpool1.start(worker1)
+        self.threadpool1.start(prog_bar)
         prog_bar.signals.start_sig.connect(self.tweet_progress_bar.start_prog_bar)
         prog_bar.signals.change_value.connect(self.tweet_progress_bar.change_prog_value)
         worker1.signals.result.connect(self.load_data_from_dict)
@@ -51,15 +51,15 @@ class ARM_Main(QtWidgets.QMainWindow):
 
     def run_bot_thread(self):
         bot_worker = Worker(listener.run_bot)
-        self.threadpool = QThreadPool()
-        self.threadpool.start(bot_worker)
+        self.threadpool2 = QThreadPool()
+        self.threadpool2.start(bot_worker)
 
     def get_address_thread(self):
         get_loc_data = Worker(self.get_address)
         prog_bar = ProgBar()
-        self.threadpool = QThreadPool()
-        self.threadpool.start(get_loc_data)
-        self.threadpool.start(prog_bar)
+        self.threadpool3 = QThreadPool()
+        self.threadpool3.start(get_loc_data)
+        self.threadpool3.start(prog_bar)
         prog_bar.signals.start_sig.connect(self.gmaps_prog_bar.start_prog_bar)
         prog_bar.signals.change_value.connect(self.gmaps_prog_bar.change_prog_value)
         get_loc_data.signals.result.connect(self.fill_address_form)
@@ -167,6 +167,7 @@ class ARM_Main(QtWidgets.QMainWindow):
             lambda: self._edit_table_item(self.regex_indication_formulas_table))
         self.edit_regex_address_formula.clicked.connect(
             lambda: self._edit_table_item(self.regex_address_formulas_table))
+        self.edit_template.clicked.connect(lambda: self._edit_table_item(self.templates_table))
 
     def _set_settings_tab(self):
         self.ava_username.setPlainText(self.ava_username_value)
@@ -323,7 +324,7 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.buttonBox = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel, self.add_table)
         self.layout = QFormLayout(self.add_table)
         if dict_name == 'descriptions':
-            column_names = ("Indication:", "Text:", "Row:")
+            column_names = ("Text:", "Indication:", "Row:")
         elif dict_name == 'sources':
             column_names = ("Account:", "City/State:", "Relevancy:")
         else:
@@ -506,11 +507,7 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.table_source_dict = {self.regex_indication_formulas_table: "indication_formulas",
                                   self.regex_address_formulas_table: "address_formulas",
                                   self.twitter_accounts_table: "sources", self.templates_table: "descriptions"}
-        # self.empty_tweet = {
-        #     'coordinates': '', 'all_indications': '', 'starting_time': [0, 0], 'time_accuracy': '', 'date': '',
-        #     'duration': '', 'description': '', 'injured': '', 'dead': '', 'source': '', 'source_type': '',
-        #     'relevancy': '', 'link': '', 'address_type': '', 'address': '', 'house_nr': '', 'location_accuracy': '',
-        #     'tweet_text': '', 'city_state': ''}
+
     def _get_settings(self):
         self.chrome_profile_dir_setting, self.run_minimized_setting, \
             self.load_images_setting, self.time_zone_setting, self.ava_username_value = file_manager.load_settings()

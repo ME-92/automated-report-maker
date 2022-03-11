@@ -168,16 +168,20 @@ class Reader():
             for keys, values in self.dictionary_descriptions.items():
                 if keys in indication:
                     description = description.join(values)
-        if address_type == 'address':
-            description2 = f"{description}on {address}."
-        elif address_type == 'block':
-            block_number = re.search('\d+[00]', address).group()
-            address = re.sub(block_number, '', address)
-            description2 = f"{description}in the {block_number} block of{address}."
-        else:
-            description2 = f"{description} in the area of {address} ."
-        description2 = re.sub("\s\s", " ", description2).replace(' .', '.')
-        return description2
+        try:
+            if address_type == 'address':
+                description2 = f"{description}on {address}."
+            elif address_type == 'block':
+                block_number = re.search('\d+[00]', address).group()
+                address = re.sub(block_number, '', address)
+                description2 = f"{description}in the {block_number} block of{address}."
+            else:
+                description2 = f"{description} in the area of {address} ."
+            description2 = re.sub("\s\s", " ", description2).replace(' .', '.')
+            return description2
+        except AttributeError:
+            return ''
+
 
     def finalize_address(self, addr_info=None):
         if addr_info:

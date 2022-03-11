@@ -37,6 +37,7 @@ class AVABot:
                 self.set_channel_and_ref()
                 self.set_geo_data()
                 self.wait_for_submit()
+
             except WebDriverException:
                 log.info("Chrome Webdriver window manually closed.")
                 return
@@ -228,8 +229,9 @@ class AVABot:
     def wait_for_submit(self):
         try:
             while self.driver.find_element('tag name', 'create-report-widget'):
-                time.sleep(1)
+                time.sleep(0.3)
         except(NoSuchWindowException, WebDriverException):
+            log.info("Closing AVA Bot browser window..")
             return
 
 # Instance=AVABot()
