@@ -2,11 +2,11 @@ import time
 import os
 
 from selenium import webdriver
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException, NoSuchElementException, NoSuchWindowException, \
     WebDriverException
-
 from json_data.file_manager import load_settings, load_report_data
 from logger.logger import log
 
@@ -70,9 +70,16 @@ class AVABot:
         self.waiting_function('css selector', 'button[class="btn btn-round primary primary-large"]')
         self.driver.find_element('css selector', 'button[class="btn btn-round primary primary-large"]').send_keys(
             Keys.ENTER)
+
         # click on a logged in email
         self.waiting_function('css selector', 'li[class="JDAKTe ibdqA W7Aapd zpCp3 SmR8"]')
         self.driver.find_element('css selector', 'li[class="JDAKTe ibdqA W7Aapd zpCp3 SmR8"]').click()
+
+        try:
+            WebDriverWait(self.driver,60).until(EC.title_is("AVA"))
+        except (NoSuchElementException, TimeoutException):
+            log.info("Password missing, closing the bot..")
+            exit()
 
     def fill_in_indications(self):
         for indication in self.data['all_indications']:
