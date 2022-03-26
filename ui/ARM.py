@@ -417,7 +417,7 @@ class ARM_Main(QtWidgets.QMainWindow):
         self._fill_regex_formula_tables(self.regex_address_formulas_table, self.address_formulas)
         self._fill_twitter_accounts_table(self.twitter_accounts_table, self.dictionary_sources)
         self._fill_templates_table(self.templates_table, self.dictionary_descriptions)
-        self.twitter_accounts_table.horizontalHeader().setSectionResizeMode(2, QtWidgets.QHeaderView.ResizeToContents)
+        self.twitter_accounts_table.horizontalHeader().setStretchLastSection(True)
         for table in source_tables:
             table.resizeColumnsToContents()
 
@@ -859,6 +859,7 @@ class ARM_Main(QtWidgets.QMainWindow):
         self.twitter_accounts_table.setGeometry(QtCore.QRect(520, 40, 331, 231))
         self.twitter_accounts_table.setStyleSheet("background-color: rgb(213, 220, 197);")
         self.twitter_accounts_table.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustToContents)
+        self.twitter_accounts_table.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.twitter_accounts_table.setObjectName("twitter_accounts_table")
         self.twitter_accounts_table.setColumnCount(3)
         item = QtWidgets.QTableWidgetItem()
@@ -868,9 +869,11 @@ class ARM_Main(QtWidgets.QMainWindow):
         item.setText("City/State")
         self.twitter_accounts_table.setHorizontalHeaderItem(1, item)
         item = QtWidgets.QTableWidgetItem()
-        item.setText("Relevancy")
+        item.setText("Score")
+        item.setTextAlignment(Qt.AlignLeft)
         self.twitter_accounts_table.setHorizontalHeaderItem(2, item)
-        self.twitter_accounts_table.horizontalHeader().setStretchLastSection(True)
+        #self.twitter_accounts_table.horizontalHeader().setStretchLastSection(True)
+
         self.twitter_accounts_table.setAutoScroll(False)
         self.add_twitter_accounts = QtWidgets.QPushButton(self.Sources)
         self.add_twitter_accounts.setGeometry(QtCore.QRect(480, 40, 31, 21))
